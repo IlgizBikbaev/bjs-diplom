@@ -65,7 +65,7 @@ moneyManager.sendMoneyCallback = (data) => {
 }
 
 const favoritesWidget = new FavoritesWidget();
-    ApiConnector.getFavorites = ((response) => {
+    ApiConnector.getFavorites((response) => {
      console.log(response);
       if (response.success) {
           favoritesWidget.clearTable();
