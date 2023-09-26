@@ -76,7 +76,6 @@ const favoritesWidget = new FavoritesWidget();
 
 favoritesWidget.addUserCallback = (data) => {
      ApiConnector.addUserToFavorites(data, response => {
-          console.log(response);
           response.message = "Пользователь успешно добавлен";
           response.error = "Ошибка! Попробуйте ещё раз";
           if (response.success) {
@@ -93,7 +92,6 @@ favoritesWidget.addUserCallback = (data) => {
 
 favoritesWidget.removeUserCallback = (data) => {
      ApiConnector.removeUserFromFavorites(data, response => {
-          console.log(response);
           response.message = "Пользователь успешно удалён";
           response.error = "Ошибка! Попробуйте ещё раз";
           if (response.success) {
