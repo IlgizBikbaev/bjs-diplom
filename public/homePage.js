@@ -66,7 +66,6 @@ moneyManager.sendMoneyCallback = (data) => {
 
 const favoritesWidget = new FavoritesWidget();
     ApiConnector.getFavorites((response) => {
-     console.log(response);
       if (response.success) {
           favoritesWidget.clearTable();
           favoritesWidget.fillTable(response.data);
@@ -76,7 +75,7 @@ const favoritesWidget = new FavoritesWidget();
 
 
 favoritesWidget.addUserCallback = (data) => {
-     ApiConnector.addUserToFavorites =(data, response => {
+     ApiConnector.addUserToFavorites(data, response => {
           console.log(response);
           response.message = "Пользователь успешно добавлен";
           response.error = "Ошибка! Попробуйте ещё раз";
@@ -93,7 +92,7 @@ favoritesWidget.addUserCallback = (data) => {
 
 
 favoritesWidget.removeUserCallback = (data) => {
-     ApiConnector.removeUserFromFavorites = (data, response => {
+     ApiConnector.removeUserFromFavorites(data, response => {
           console.log(response);
           response.message = "Пользователь успешно удалён";
           response.error = "Ошибка! Попробуйте ещё раз";
